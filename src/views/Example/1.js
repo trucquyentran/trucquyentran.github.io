@@ -12,8 +12,11 @@ class Mycomponent extends React.Component{
 
     addNewJob = (job) => {
         console.log('>>> Check: ', job)
+        let curenkynang = this.state.kynang;
+        curenkynang.push(job)
         this.setState({
-            kynang: [...this.state.kynang, job]
+            // kynang: [...this.state.kynang, job]
+            kynang: curenkynang
         })
         
     }
