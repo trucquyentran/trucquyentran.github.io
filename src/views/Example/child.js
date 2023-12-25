@@ -38,11 +38,11 @@ class Childcomponent extends React.Component
                             {
                                 kynang.map( ( item, index ) =>
                                 {
-                                    if ( +item.salary >=7 )
+                                    if ( +item.salary >=700 )
                                     {
                                         return (
                                             <div key={ item.id }>
-                                                { item.id } - { item.name } 
+                                                { item.name } - { item.salary } 
                                             </div>
                                         )
                                     }

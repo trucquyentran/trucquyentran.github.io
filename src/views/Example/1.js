@@ -4,16 +4,16 @@ import AddComponent from './AddComponent';
 class Mycomponent extends React.Component{
     state = {
         kynang: [
-            {id: '1', name: 'php', salary: '7'},
-            {id: '2', name: 'html', salary: '9'}, 
-            {id: '3', name: 'css', salary: '5'}
+            {id: '1', name: 'php', salary: '700'},
+            {id: '2', name: 'html', salary: '900'}, 
+            {id: '3', name: 'css', salary: '500'}
         ]
     }
 
     addNewJob = (job) => {
         console.log('>>> Check: ', job)
         this.setState({
-            arrJob: [...this.state.arrJob, job]
+            kynang: [...this.state.kynang, job]
         })
         
     }

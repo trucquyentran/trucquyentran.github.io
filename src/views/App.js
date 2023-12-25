@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import Mycomponent from './Example/1';
 
 function App ()

@@ -25,13 +25,21 @@ class AddComponent extends React.Component
 
     handleClickButton = (event) =>{
         event.preventDefault()
+        if(!this.state.name || !this.state.salary){
+            alert("Lỗi! Vui lòng nhập vào đày đủ dữ liệu")
+            return;
+        }
         console.log('>>> Check data input: ', this.state)
-        // alert('Cick me!')
+        
         this.props.addNewJob({
             id: Math.floor(Math.random() * 1001),
             name: this.state.name,
             salary: this.state.salary
             
+        })
+        this.setState({
+            name: '',
+            salary: ''
         })
 
         
