@@ -21,6 +21,15 @@ class Mycomponent extends React.Component{
         
     }
 
+    deleteKynang = (job) =>{
+        let curenkynang = this.state.kynang;
+        curenkynang = curenkynang.filter(item => item.id !== job.id)
+        this.setState({
+            kynang: curenkynang
+        })
+    }
+
+
  
     
 
@@ -32,7 +41,8 @@ class Mycomponent extends React.Component{
                 <div><b>Chuyên ngành:</b> {this.state.nganh}</div><br/> */}
                 <AddComponent addNewJob={this.addNewJob}/>
                
-                <Childcomponent kynang={this.state.kynang}/>
+                <Childcomponent kynang={this.state.kynang}
+                deleteKynang={this.deleteKynang}/>
             </>
             
         )
